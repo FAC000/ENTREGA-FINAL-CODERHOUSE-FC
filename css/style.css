@@ -623,6 +623,10 @@ iframe {
 
 /* NUESTRAS SALAS */
 
+.titulo{
+    margin-top: 100px;
+}
+
 .carousel.slide {
     margin: auto;
     width: 50%;
