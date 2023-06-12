@@ -1,0 +1,928 @@
+/* CODIGO CSS  QUE SE APLICA POR IGUAL EN TODAS LAS PAGINAS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(https://cdn.visionfruticola.com/2021/11/man-sitting-on-sofa-in-3d-glasses-eating-popcorn-watching-3d-video-game-2-scaled.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    text-transform: uppercase;
+    text-align: center;
+    display: grid;
+    min-height: 100vh;
+    grid-template-rows: auto 1fr auto;
+}
+
+.cover {
+    background-color: #2f3e4684;
+}
+
+/* NAV BAR */
+
+nav {
+   background-color:  #c3d4c7;
+    font-size: 20px;
+    font-family: oswald;
+    position: fixed;
+    width: 100%;
+    padding: 50px;
+
+}
+
+nav a,
+ul,
+li {
+    display: inline;
+    position: relative;
+    text-decoration: none;
+    color: #354f52;
+    margin: 20px;
+}
+
+nav a:after {
+    content: "";
+    position: absolute;
+    background: linear-gradient(#84A98C, #84A98C, #84A98C);
+    height: 3px;
+    width: 0%;
+    left: 0;
+    bottom: -10px;
+    transition: 1s;
+}
+
+nav a:hover:after {
+    width: 100%;
+}
+
+/* MEDIA QUERY NAV */
+
+@media screen and (max-width: 1500px) {
+
+    nav a,
+    ul,
+    li {
+        display: inline-block;
+        margin: 10px;
+    }
+}
+
+@media screen and (max-width: 650px) {
+
+    nav a,
+    ul,
+    li {
+        display: block;
+        margin: 20px;
+        font-size: 15px;
+    }
+}
+
+
+/* REDES */
+
+.redes,
+.redesconfdos,
+.redesconftres,
+.redesconf {
+    position: fixed;
+    bottom: 10px;
+    right: 20px;
+    top: 50%;
+
+}
+
+.redes_icon {
+    display: inline;
+}
+
+.redes_icon a {
+    color: #c3d4c7;
+    font-size: 25px;
+    padding: 20px;
+    display: block;
+}
+
+.redes_icon a:hover {
+    text-shadow: 0 0 5px #c3d4c77b;
+    transform: scale(1.3);
+    transition: 1s;
+}
+
+/* REDES MEDIA QUARY */
+
+@media screen and (max-width: 900px) {
+
+
+    .redes {
+        position: static;
+        margin-top: 60px;
+        display: inline-block;
+    }
+
+    .redes a {
+        padding: 20px;
+    }
+}
+
+
+/* ARRIBA */
+
+.arriba p {
+    font-size: 10px;
+    margin-top: 10px;
+}
+
+.arriba {
+    visibility: hidden;
+}
+
+.arriba i {
+    color: #ffffff;
+}
+
+.arriba i:hover {
+   
+    transform: scale(1.1);
+    transition: 0.5s;
+}
+
+.arribauno p {
+    margin-top: 10px;
+    font-size: 15px;
+    color: #c3d4c7;
+}
+
+
+.arribauno i {
+    margin-top: 20px;
+    color: #ffffff;
+}
+
+.arribauno i:hover {
+   
+    transform: scale(1.1);
+    transition: 0.5s;
+}
+
+/* FOOTER */
+
+footer {
+    background-color: #354f52;
+    text-align: center;
+    padding: 1.5em 0;
+    font-size: 10px;
+    color: #c3d4c7;
+}
+
+
+
+/* FOOTER MEDIA QUERY */
+
+
+@media screen and (max-width: 1090px) {
+
+
+    footer {
+        margin-top: 100px;
+    }
+}
+
+@media screen and (max-width: 440px) {
+
+
+    footer {
+        font-size: 8px;
+    }
+}
+
+/* CODIGO CSS PAGINAS INDIVIDUALES */
+
+/* INDEX */
+
+.inicio {
+    display: flex;
+    flex-direction: column;
+}
+
+h1 {
+    margin: 200px 0px 20px 0px;
+    color: #52796F;
+    font-size: 80px;
+    text-shadow: 2px 2px 2px #84A98C;
+    font-family: montserrat;
+}
+
+span {
+    color: #c3d4c7;
+}
+
+.cine {
+    font-size: 200px;
+}
+
+h2 {
+    color: #ffffff;
+    font-size: 25px;
+    margin-bottom: 100px;
+    font-family: montserrat;
+}
+
+.main {
+    font-family: oswald;
+    font-size: 16px;
+    width: 600px;
+    color: #c3d4c7;
+    line-height: 32px;
+    letter-spacing: 1px;
+    margin: auto;
+    margin-bottom: 220px;
+
+}
+
+/* INDEX MEDIA QUARY */
+
+@media screen and (max-width: 1165px) {
+
+    .inicio {
+        margin-top: 200px;
+    }
+
+}
+
+@media screen and (max-width: 650px) {
+    nav {
+        position: static;
+    }
+
+    .main {
+        width: 300px;
+        font-size: 15px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+
+    .arriba {
+        margin-top: 30px;
+        visibility: visible;
+    }
+
+    .arriba a {
+
+        font-size: 25px;
+        color: #84A98C;
+    }
+
+    .arriba p {
+        color: #c3d4c7;
+        margin-top: 10px;
+        font-size: 10px;
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+
+    h1 {
+        font-size: 35px;
+        margin-bottom: 50px;
+        margin-top: 10px;
+    }
+
+    .cine {
+        font-size: 100px;
+    }
+
+    p {
+        width: 100%;
+    }
+}
+
+/* NOSOTROS */
+
+.nosotros {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 800px;
+    grid-template-areas:
+        "nosotros imagen"
+        "promociones imagenpromo";
+}
+
+.nosotros_uno {
+    grid-area: nosotros;
+    margin-top: 100px;
+}
+
+.nosotros_texto {
+    color: #c3d4c7;
+    width: 50%;
+    margin: auto;
+    margin-top: 150px;
+    letter-spacing: 5px;
+    line-height: 20px;
+}
+
+.imagen_nosotros {
+    grid-area: imagen;
+}
+
+.imagen_nosotros img {
+    width: 50%;
+    margin-top: 350px;
+}
+
+.promociones {
+    grid-area: promociones;
+}
+
+.promocion_dosporuno img {
+    width: 600px;
+    margin-bottom: 200px;
+}
+
+.promocion_descripcion {
+    grid-area: imagenpromo;
+}
+
+.promocion_descripcion p {
+    color: #c3d4c7;
+    width: 70%;
+    margin: auto;
+    margin-top: 250px;
+    letter-spacing: 5px;
+    line-height: 20px;
+    padding: 50px;
+}
+
+/* SOBRE NOSOTROS MEDIA QUARY */
+
+@media screen and (max-width:1440px) {
+
+    .imagen_nosotros img {
+
+        margin-top: 400px;
+    }
+
+}
+
+@media screen and (max-width:1024px) {
+
+    .imagen_nosotros img {
+
+        margin-top: 700px;
+        width: 80%;
+    }
+
+    .promociones {
+        margin-top: 100px;
+    }
+
+    .promocion_descripcion p {
+        width: 100%;
+        margin-top: 500px;
+    }
+}
+
+@media screen and (max-width:768px) {
+
+    .nosotros_texto {
+        width: 80%;
+    }
+
+    .nosotros {
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .imagen_nosotros img {
+        margin-top: 100px;
+        width: 100%;
+    }
+
+    .promociones {
+
+        margin-top: 10px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+
+    .promociones img {
+        width: 100%;
+    }
+
+    .promocion_descripcion p {
+        width: 100%;
+        margin-top: 0;
+        margin-bottom: 200px;
+    }
+}
+
+/* UBICACION */
+
+.ubicacion {
+    width: 70%;
+    margin: auto;
+}
+
+.titulo {
+    font-family: oswald;
+    color: #c3d4c7;
+    margin-top: 200px;
+    font-size: 35px;
+    margin-bottom: 40px;
+}
+
+iframe {
+    margin-top: 50px;
+    margin-bottom: 120px;
+}
+
+
+/* UBICACION MEDIA QUERY */
+
+@media screen and (max-width: 1350px) {
+
+
+    .redesconftres {
+        position: static;
+        margin-top: 60px;
+    }
+
+    .redesconftres a {
+        padding: 20px;
+        display: inline-block;
+    }
+
+    iframe {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 1120px) {
+
+    .ubicacion {
+        margin-top: 400px;
+        width: 100%;
+    }
+
+}
+
+@media screen and (max-width: 670px) {
+
+
+    iframe {
+        margin-top: 100px;
+    }
+
+    .ubicacion {
+        margin-top: 10px;
+    }
+
+    .titulo {
+        margin-top: 400px;
+    }
+
+}
+
+@media screen and (max-width: 650px) {
+
+    .titulo {
+        margin-top: 200px;
+    }
+
+    .titulo {
+        font-size: 30px;
+    }
+
+}
+
+
+/* CARTELERA */
+
+.carteleranav {
+    position: static;
+}
+
+.titulocinco {
+    font-family: oswald;
+    font-size: 35px;
+    color: #c3d4c7;
+    margin-top: 80px;
+}
+
+.cartel {
+    margin-top: 80px;
+    width: 100%;
+    display: flex;
+    max-width: 1700px;
+    margin-left: 100px;
+    margin-bottom: 50px;
+}
+
+.card {
+    width: 100%;
+    margin: 20px;
+    border-radius: 6px;
+    background: #84A98C;
+    box-shadow: 0px 1px 10px #84A98C;
+    transition: all 400ms ease-out;
+}
+
+.card:hover {
+    box-shadow: 5px 5px 20px #84A98C;
+    transform: translateY(-3%);
+}
+
+.card:hover {
+    box-shadow: 5px 5px 20px #84A98C;
+    transition: 1s;
+}
+
+.card img {
+    width: 100%;
+    height: 500px;
+}
+
+.card .contenido-card h2 {
+    padding: 15px;
+    text-align: center;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    font-family: montserrat;
+    color: black;
+    padding: 20px;
+    font-size: 15px;
+}
+
+/*CARTELERA MEDIA QUARY*/
+
+@media screen and (max-width: 1700px) {
+
+    .cartel {
+        margin-left: 0;
+    }
+
+    .redesconf {
+        position: static;
+        margin-top: 40px;
+
+    }
+
+    .redesconf a {
+        padding: 20px;
+        display: inline-block;
+    }
+
+}
+
+@media only screen and (max-width:351px) {
+
+    .cartel {
+        flex-wrap: wrap;
+    }
+
+    .card {
+        margin: 40px;
+        margin-left: 60px;
+        margin-right: 60px;
+        margin-bottom: 100px;
+    }
+
+    .title-cards h2 {
+        font-size: 45px;
+        margin-left: 20px;
+    }
+
+    .card img {
+        width: 100%;
+        height: 300px;
+    }
+}
+
+
+@media only screen and (min-width:320px) and (max-width:1000px) {
+    .cartel {
+        flex-wrap: wrap;
+    }
+
+    .card {
+        margin: 40px;
+        margin-left: 60px;
+        margin-right: 60px;
+        margin-bottom: 100px;
+    }
+}
+
+/* NUESTRAS SALAS */
+
+.carousel.slide {
+    margin: auto;
+    width: 50%;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.carousel.slide img {
+    width: 500px;
+    height: 500px;
+}
+
+/* NUESTRAS SALAS MEDIA QUARY */
+
+@media screen and (max-width: 1350px) {
+
+    .carousel.slide {
+        width: 80%;
+    }
+
+    .galerynav {
+        position: static;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .carousel.slide {
+        width: 90%;
+    }
+}
+
+@media screen and (min-width: 1350px) {
+    .arribauno {
+        visibility: hidden;
+    }
+}
+
+/* ENTRADAS */
+
+.titulotres {
+    font-family: oswald;
+    font-size: 35px;
+    color: #c3d4c7;
+}
+
+.tablas {
+    margin-top: 80px;
+    width: 100%;
+    margin-bottom: 100px;
+}
+
+table {
+    font-family: montserrat;
+    margin: auto;
+    font-size: 20px;
+    color: #ffffff;
+    box-shadow: 0 0 10px #84A98C;
+    border-collapse: collapse;
+    background-image: url(https://img.freepik.com/vector-gratis/badajo-fondo-pelicula-carrete-pelicula-cine_1017-26096.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+   
+}
+
+th {
+    font-size: 30px;
+    padding: 20px;
+    border: 1px solid #84A98C;
+}
+
+td {
+    border: 1px solid #84A98C;
+    padding: 20px;
+    text-shadow: 0 0 10px white, 0 0 25px white;
+}
+
+.idioma {
+    color: white;
+}
+
+.entr {
+    width: 200px;
+}
+
+.boton {
+    font-family: oswald;
+    background-color: #354f52b2;
+    font-size: 18px;
+    color: #c3d4c7;
+    padding: 5px;
+    text-transform: uppercase;
+}
+
+.boton:hover {
+    cursor: pointer;
+    background-color: #354f52;
+    color: #c3d4c7;
+    text-shadow: 0 0 10px #84a98c39;
+}
+
+/* ENTRADAS MEDIA QUARY */
+
+@media screen and (max-width: 1120px) {
+
+    .titulotres {
+        margin-top: 400px;
+    }
+}
+
+@media screen and (max-width: 670px) {
+
+    .titulotres {
+        margin-top: 400px;
+    }
+}
+
+@media screen and (max-width: 650px) {
+
+    .titulotres {
+        margin-top: 200px;
+        font-size: 30px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+
+    table {
+        font-size: 15px;
+    }
+
+    th {
+        font-size: 20px;
+    }
+
+    .boton {
+        font-size: 15px;
+    }
+}
+
+/* SPOTIFY */
+
+.contenedor {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.textospo {
+    padding: 80px;
+    padding-left: 200px;
+    padding-right: 200px;
+    margin: auto;
+    margin-top: 80px;
+    background-image: url(https://w0.peakpx.com/wallpaper/567/583/HD-wallpaper-joker-movie-joaquin-phoenix-arthur-fleck.jpg);
+    background-size: cover;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #84A98C;
+}
+
+.sp {
+    width: 500px;
+    margin: auto;
+    color: white;
+    letter-spacing: 5px;
+    line-height: 20px;
+}
+
+.spo {
+    width: 100%;
+    margin: auto;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.playlist {
+    width: 50%;
+}
+
+/* SPOTIFY MEDIA QUARY */
+
+@media screen and (max-width:800px) {
+
+    .textospo {
+        width: 90%;
+        padding: 40px;
+    }
+
+    .sp {
+        width: 90%;
+        font-size: 15px;
+        letter-spacing: 3px;
+    }
+
+    .playlist {
+        width: 90%;
+    }
+}
+
+/* CONTACTO */
+
+.parrafocontacto {
+    margin: auto;
+    width: 500px;
+    margin-top: 100px;
+    color: white;
+    font-family: oswald;
+    font-size: 15px;
+    letter-spacing: 3px;
+    line-height: 30px;
+}
+
+.container {
+    background-image: url(https://static.basicinvite.com/media/bi/34806/japanese-kerria-wallpaper-l-dark-green.jpg?q=1683903378);
+    background-size: cover;
+    width: 450px;
+    height: 700px;
+    padding: 10px 20px;
+    font-size: 25px;
+    display: flex;
+    margin: auto;
+    box-sizing: border-box;
+    border-radius: 10px;
+    border-style: solid;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+label {
+    color: white;
+    font-family: montserrat;
+}
+
+input,
+textarea,
+option,
+select {
+    width: 100%;
+    margin-bottom: 50px;
+    padding: 7px;
+    font-size: 20px;
+    border: none;
+    margin-top: 10px;
+    color: white;
+    background-color: rgba(4, 4, 4, 0.359);
+}
+
+option {
+    color: #c3d4c7;
+    background-color: #52796F;
+}
+
+
+textarea:hover {
+    background-color: #84A98C;
+}
+
+input:hover {
+    background-color: #84A98C;
+}
+
+select:hover {
+    background-color: #84A98C;
+}
+
+textarea {
+    min-height: 100px;
+    max-height: 200px;
+    max-width: 100%;
+}
+
+#button {
+    background-color: rgba(4, 4, 4, 0.359);
+    color: white;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+#button:hover {
+    cursor: pointer;
+    background-color: #84A98C;
+    color: black;
+}
+
+/* CONTACTO MEDIA QUARY */
+
+@media screen and (max-width:800px) {
+
+    .parrafocontacto {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:500px) {
+
+    .container {
+        width: 90%;
+    }
+
+    .parrafocontacto {
+        width: 80%;
+
+    }
+}
