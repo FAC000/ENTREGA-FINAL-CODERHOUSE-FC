@@ -773,7 +773,13 @@ iframe {
     flex-direction: column;
     width: 100%;
 }
-
+.titulotres{
+    margin-top: 2000px;
+    font-family: oswald;
+    font-size: 35px;
+    color: #c3d4c7;
+    margin-top: 80px;
+}
 .textospo {
     padding: 80px;
     padding-left: 200px;

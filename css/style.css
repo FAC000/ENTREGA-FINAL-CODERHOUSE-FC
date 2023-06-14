@@ -603,6 +603,13 @@ footer {
 }
 
 /* SPOTIFY */
+.titulotres {
+  margin-top: 200px;
+  font-family: oswald;
+  font-size: 35px;
+  color: #c3d4c7;
+}
+
 .contenedor {
   display: flex;
   flex-direction: column;
