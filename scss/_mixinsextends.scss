@@ -1,0 +1,45 @@
+/* EXTENDS TEXTOS */
+
+.titulospag {
+    font-family: $Fontfamily;
+    font-size: $Sizetitulo;
+    color: $Colortextosuno;
+}
+
+.subitulostext {
+    font-family: $Fontfamilydos;
+    color: $Colortextosuno;
+    font-size: $Sizetitulo -10px;
+}
+
+.textos-parrafos {
+    font-family: oswald;
+    font-size: 16px;
+    color: #c3d4c7;
+    line-height: 32px;
+    letter-spacing: 1px;
+}
+
+/* MIXINS */
+@mixin tamanos($width, $height) {
+    height: $height;
+    width: $width;
+}
+
+@mixin grid($g, $c, $p) {
+    display: $g;
+    grid-template-columns: $c;
+    gap: $p;
+
+}
+
+@mixin background ($bc, $bp, $bs){
+    background-color: $bc ;
+    background-position: $bp;
+    background-size: $bs;
+}
+
+@mixin flex ($f, $w){
+    display: $f;
+    flex-wrap: $w;
+}

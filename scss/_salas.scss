@@ -1,0 +1,42 @@
+/* NUESTRAS SALAS */
+
+@import "mixinsextends";
+
+.titulo {
+    margin-top: 100px;
+    font-family: $Fontfamily;
+    color: $Colortextosuno;
+    font-size: $Sizetitulo;
+    margin-bottom: 40px;
+}
+
+.carousel.slide {
+    margin: auto;
+    width: 50%;
+    margin-top: 100px;
+    margin-bottom: 100px;
+
+    img {
+        @include tamanos (500px, 500px)
+    }
+}
+
+/* NUESTRAS SALAS MEDIA QUARY */
+
+@media screen and (max-width: 1350px) {
+
+    .carousel.slide {
+        width: 80%;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+    .carousel.slide {
+        width: 90%;
+        margin-bottom: 200px;
+    }
+}
+
+
+

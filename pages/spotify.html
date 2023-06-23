@@ -1,63 +1,91 @@
-<!DOCTYPE html>
-<html lang="es">
+<!DOCTYPE html> <!--Tipo de documento -->
+<html lang="es"> <!-- Lenguaje predeterminado del sitio -->
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cine Cinemania</title>
+<head> <!-- Parte privada del sitio -->
+    <meta charset="UTF-8"> <!-- Leer caracteres especiales -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- Compatibilidad con internet explorer -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  <!-- Adaptacion a dispositivos moviles -->
+    <title>Escuchaste esta</title> <!-- Tiutulo del sitio (Pestaña de navegacion) -->
+         <!-- Icono del sitio (Pestaña de navegacion) -->
     <link rel="shortcut icon" href="../img/c-programming-icon-17.jpg" />
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <!-- Css -->
     <link rel="stylesheet" href="../css/style.css">
+    <!-- Icons-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
         integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=Oswald:wght@200&display=swap"
         rel="stylesheet">
+         <!-- Css animation -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 </head>
 
-<body>
+<body> <!-- Todo el contenido de nuestro sitio -->
+    <!-- Etiquetas semanticas -->
     <div class="cover">
-        <nav id="up">
-            <ul>
-                <li><a href="../index.html">Inicio</a></li>
-                <li><a href="./nosotros.html">nosotros</a></li>
-                <li><a href="./ubicacion.html">¿donde estamos?</a></li>
-                <li><a href="./cartelera.html">cartelera</a></li>
-                <li><a href="./salas.html">nuestras salas</a></li>
-                <li><a href="./entradas.html">entradas</a></li>
-                <li><a href="./spotify.html">apreta aca</a></li>
-                <li><a href="./contacto.html">contacto</a></li>
-            </ul>
+        <!-- Barra de navegacion -->
+        <nav id="up" class=" navbar navbar-expand-xl bg-body-tertiary  >
+            <div class=" container-fluid">
+            <a class="navbar-brand" href="../index.html">CINEMANIA</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
+                aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarText">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="../index.html">inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./nosotros.html">nosotros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./ubicacion.html">ubicacion</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./cartelera.html">cartelera</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./salas.html">salas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./entradas.html">entradas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./spotify.html">spotify</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./contacto.html">contacto</a>
+                    </li>
+                </ul>
+
+            </div>
         </nav>
 
+ <!-- Parte principal del sitio -->
         <main>
             <div class="spotify">
-            <h1 class="titulotres">Playlist Pochoclera</h1>
-            <div class="contenedor">
-                <div class="textospo">
-                    <p class="sp"> ¿Venis en colectivo y el personaje que se te sento al lado no para de
-                        hacer ruido?.
-                        ¿Tenes un largo camino a pata y no queres escucharte a vos mismo quejarte?.
-                        ¿Venis en auto pero justamente ayer
-                        empezo a hacer un "ruidito" y como es fin de mes lo queres ignorar?.
-                        Aca te traemos la solucion.
-                        Una playlist que se renueva todas las semanas, un infaltable para los amantes del
-                        cine.
-                        Ideado para que lo escuches viniendo al nuestro.
-                </div>
-                <div class="spo">
-                    <iframe class="playlist" style="border-radius:12px"
-                        src="https://open.spotify.com/embed/playlist/6aYQxGAj7L2VeEwYvtJ8EV?utm_source=generator&theme=0"
-                        width="100%" height="352" frameBorder="0" allowfullscreen=""
-                        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-                        loading="lazy"></iframe>
+                <h1 class="titulocinco titulo animate__animated animate__backInLeft animate__slow">Playlist Pochoclera</h1>
+                <div class="contenedor">
+                    <div class="spo">
+                        <iframe class="playlist" style="border-radius:12px"
+                            src="https://open.spotify.com/embed/playlist/6aYQxGAj7L2VeEwYvtJ8EV?utm_source=generator&theme=0"
+                            width="100%" height="352" frameBorder="0" allowfullscreen=""
+                            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                            loading="lazy"></iframe>
+                            <h2 class="titulo animate__animated animate__backInLeft animate__slow animate__delay-2s ">la mejor musica te acompaña al mejor cine.</h2>
+                    </div>
+                    
                 </div>
             </div>
-        </div>
         </main>
 
+        <!-- Iconos de redes -->
         <div class="redesconftres">
             <div class="redes_icon"><a href="#"><i class="fa-brands fa-facebook"></i></a></div>
             <div class="redes_icon"><a href="#"><i class="fa-brands fa-twitter"></i></a></div>
@@ -65,17 +93,13 @@
             <div class="redes_icon"><a href="#"><i class="fa-brands fa-youtube"></i></a></div>
         </div>
 
-        <div class="arriba">
-            <a href="#up"><i class="fa-solid fa-arrow-up"></i></a>
-            <p>volver arriba</p>
-        </div>
-
-
+        <!-- Footer -->
         <footer>
             Copyright© Cine Cinemania - 2023. Todos los derechos reservados.
         </footer>
     </div>
 
+    <script src="../js/bootstrap.js"></script>  <!-- Script de Javascript -->
 </body>
 
 </html>

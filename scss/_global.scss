@@ -1,0 +1,21 @@
+@import "mixinsextends";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(https://cdn.visionfruticola.com/2021/11/man-sitting-on-sofa-in-3d-glasses-eating-popcorn-watching-3d-video-game-2-scaled.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    text-transform: uppercase;
+    text-align: center;
+    min-height: 100vh;
+    @include grid(grid, 3fr, 1fr)
+}
+
+.cover {
+    background-color: #2f3e4684;
+}

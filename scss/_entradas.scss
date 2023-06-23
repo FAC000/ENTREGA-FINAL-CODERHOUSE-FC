@@ -1,0 +1,111 @@
+/* ENTRADAS */
+
+@import "mixinsextends";
+
+
+.entradas {
+    margin: auto;
+    margin-top: 50px;
+    width: 100%;
+    max-width: 1200px;
+    padding: 40px 0;
+    @include grid(grid, 3fr 1fr, 50px);
+    text-transform: uppercase;
+
+    .entradascontainer {
+        @include grid(grid, 3fr 1fr, 20px);
+        .ent {
+            border-radius: 10px;
+            font-weight: bold;
+            padding: 20px;
+            position: relative;
+            overflow: hidden;
+            @include background (transparent, center, cover);
+            border: 3px solid #354f52;
+            box-shadow: 0 0 10px rgb(255, 255, 255);
+            color: $Colortextosdos;
+            max-height: 300px;
+            height: 2000px;
+    
+    
+            &:hover {
+                transform: translateY(-3%);
+            }
+    
+            .button {
+                margin: auto;
+                margin-top: 10px;
+                background-color: #354f52;
+                display: block;
+                max-height: 100px;
+                font-weight: bold;
+                font-size: $Sizetextos;
+                text-align: center;
+                padding: 10px;
+                border: none;
+                cursor: pointer;
+                text-transform: uppercase;
+                color: $Colortextosdos;
+            }
+    
+            h2 {
+                margin-top: 100px;
+                font-size: $Sizetextos +10px;
+                font-family: $Fontfamily;
+                background-color: #354f5296;
+            }
+    
+        }
+    
+    }
+
+   
+
+    .banner {
+        border-radius: 10px;
+        text-align: center;
+        padding: 20px;
+        @include background (transparent, center, cover);
+        justify-content: space-between;
+        border: 3px solid #354f52;
+        box-shadow: 0 0 10px rgb(255, 255, 255);
+
+        &:hover {
+            transform: translateY(-3%);
+        }
+
+        h2 {
+            @extend .titulospag;
+        }
+
+        p {
+            margin-top: 400px;
+            @extend .textos-parrafos;
+        }
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    .entradas {
+        margin-top: 50px;
+       @include flex( flex, wrap);
+     
+
+        .entradascontainer {
+            gap: 100px;
+            @include flex( flex, wrap);
+
+            .ent {
+                width: 80%;
+                margin: auto;
+            }
+        }
+    }
+
+    .banner {
+        width: 80%;
+        margin: auto;
+    }
+
+}

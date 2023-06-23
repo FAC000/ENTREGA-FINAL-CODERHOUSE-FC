@@ -1,88 +1,122 @@
-<!DOCTYPE html>
-<html lang="es">
+<!DOCTYPE html> <!--Tipo de documento -->
+<html lang="es"> <!-- Lenguaje predeterminado del sitio -->
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cine Cinemania</title>
+<head>  <!-- Parte privada del sitio -->
+    <meta charset="UTF-8"> <!-- Leer caracteres especiales -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- Compatibilidad con internet explorer -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Adaptacion a dispositivos moviles -->
+    <title>Contactanos</title> <!-- Tiutulo del sitio (Pestaña de navegacion) -->
+    <!-- Icono del sitio (Pestaña de navegacion) -->
     <link rel="shortcut icon" href="../img/c-programming-icon-17.jpg" />
+      <!-- Bootstrap -->
+    <link rel="stylesheet" href="../css/bootstrap.css">
+     <!-- Css -->
     <link rel="stylesheet" href="../css/style.css">
+     <!-- Icons-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
         integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=Oswald:wght@200&display=swap"
         rel="stylesheet">
+        <!-- Css animation -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 </head>
 
-<body>
+<body> <!-- Todo el contenido de nuestro sitio -->
+    <!-- Etiquetas semanticas -->
     <div class="cover">
-        <nav id="up">
-            <ul>
-                <li><a href="../index.html">Inicio</a></li>
-                <li><a href="./nosotros.html">nosotros</a></li>
-                <li><a href="./ubicacion.html">¿donde estamos?</a></li>
-                <li><a href="./cartelera.html">cartelera</a></li>
-                <li><a href="./salas.html">nuestras salas</a></li>
-                <li><a href="./entradas.html">entradas</a></li>
-                <li><a href="./spotify.html">apreta aca</a></li>
-                <li><a href="./contacto.html">contacto</a></li>
-            </ul>
+        <!-- Barra de navegacion -->
+        <nav id="up" class="navbar navbar-expand-lg bg-body-tertiary  position-fixed >
+            <div class=" container-fluid">
+            <a class="navbar-brand" href="../index.html">CINEMANIA</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
+                aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarText">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="../index.html">inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./nosotros.html">nosotros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./ubicacion.html">ubicacion</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./cartelera.html">cartelera</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./salas.html">salas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./entradas.html">entradas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./spotify.html">spotify</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./contacto.html">contacto</a>
+                    </li>
+                </ul>
+
+            </div>
         </nav>
 
+ <!-- Parte principal del sitio -->
         <main>
-            <h1 class="titulotres">¡Contactanos!</h1>
-                <p class="parrafocontacto">Si tuviste algun inconveniente/problema, te sugeuerimos escribirlo aca. Lo
-                    mismo aplica para
-                    consultas, criticas constructibas o algun mensaje lindo sobre nuestros cines. Todo es bienvenido.
-                </p>
-        <div class="container">
-            <form action="#" method="post">
-                <label for="name">Nombre</label>
-                <input type="text" id="name" name="user_name" placeholder="Nombre">
-                <label for="mail">Correo Electronico</label>
-                <input type="email" id="email" name="user_mail" placeholder="Ejemple@gmail.com">
-                <label for="msg">Mensaje</label>
-                <textarea id="msg" name="user_message" placeholder="Escriba su mensaje aqui"></textarea>
-                <label for="pais">¿De que pais nos visitas?</label>
-                <select name="pais" id="pais">
-                <option value="Elegi aca tu pais.">Elegi aca tu pais.</option>
-                <option value="ARG">Argentina</option>
-                <option value="URU">Uruguay</option>
-                <option value="COL">Colombia</option>
-                <option value="CHI">Chile</option>
-                <option value="BOL">Bolivia</option>
-                <option value="ECU">Ecuador</option>
-                <option value="PRU">Peru</option>
-                <option value="MEX">Mexico</option>
-                <option value="ESP">España</option>
-                <option value="OTRO">Otro</option>
-            </select>
-                <input type="button" value="ENVIAR" id="button">
-            </form>
+            <h1 class="titulocontact titulo animate__animated animate__backInLeft animate__slow">¡Contactanos!</h1>
+            <p class="parrafocontacto animate__animated animate__backInDown">Si tuviste algun inconveniente/problema, te suguerimos escribirlo aca. Lo
+                mismo aplica para
+                consultas, criticas constructivas o algun mensaje lindo sobre nuestros cines, Todo es bienvenido.
+            </p>
+            <div class="container">
+                <form action="#" method="post">
+                    <label for="name">Nombre</label>
+                    <input type="text" id="name" name="user_name" placeholder="Nombre">
+                    <label for="mail">Correo Electronico</label>
+                    <input type="email" id="email" name="user_mail" placeholder="Ejemple@gmail.com">
+                    <label for="msg">Mensaje</label>
+                    <textarea id="msg" name="user_message" placeholder="Escriba su mensaje aqui"></textarea>
+                    <label for="pais">¿De que pais nos visitas?</label>
+                    <select name="pais" id="pais">
+                        <option value="Elegi aca tu pais.">Elegi aca tu pais.</option>
+                        <option value="ARG">Argentina</option>
+                        <option value="URU">Uruguay</option>
+                        <option value="COL">Colombia</option>
+                        <option value="CHI">Chile</option>
+                        <option value="BOL">Bolivia</option>
+                        <option value="ECU">Ecuador</option>
+                        <option value="PRU">Peru</option>
+                        <option value="MEX">Mexico</option>
+                        <option value="ESP">España</option>
+                        <option value="OTRO">Otro</option>
+                    </select>
+                    <input type="button" value="ENVIAR" id="button">
+                </form>
+            </div>
+        </main>
+
+        <!-- Iconos de redes -->
+        <div class="redesconftres">
+            <div class="redes_icon"><a href="#"><i class="fa-brands fa-facebook"></i></a></div>
+            <div class="redes_icon"><a href="#"><i class="fa-brands fa-twitter"></i></a></div>
+            <div class="redes_icon"><a href="#"><i class="fa-brands fa-instagram"></i></a></div>
+            <div class="redes_icon"><a href="#"><i class="fa-brands fa-youtube"></i></a></div>
         </div>
-    </main>
 
-    <div class="redes">
-        <div class="redes_icon"><a href="#"><i class="fa-brands fa-facebook"></i></a></div>
-        <div class="redes_icon"><a href="#"><i class="fa-brands fa-twitter"></i></a></div>
-        <div class="redes_icon"><a href="#"><i class="fa-brands fa-instagram"></i></a></div>
-        <div class="redes_icon"><a href="#"><i class="fa-brands fa-youtube"></i></a></div>
-    </div>
-
-    <div class="arribauno">
-        <a href="#up"><i class="fa-solid fa-arrow-up"></i></a>
-        <p>volver arriba</p>
-    </div>
-
-
-    <footer>
-        Copyright© Cine Cinemania - 2023. Todos los derechos reservados.
-    </footer>
+        <!-- Footer -->
+        <footer>
+            Copyright© Cine Cinemania - 2023. Todos los derechos reservados.
+        </footer>
 
     </div>
+
+    <script src="../js/bootstrap.js"></script>  <!-- Script de Javascript -->
 </body>
 
 </html>

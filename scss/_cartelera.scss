@@ -1,0 +1,99 @@
+/* CARTELERA */
+
+@import "mixinsextends";
+
+.cartel {
+    margin-top: 80px;
+    width: 100%;
+    display: flex;
+    max-width: 1700px;
+    margin-left: 100px;
+    margin-bottom: 50px;
+
+    .card {
+        width: 100%;
+        margin: 20px;
+        border-radius: 6px;
+        background: #84A98C;
+        box-shadow: 0px 1px 10px #84A98C;
+        transition: all 400ms ease-out;
+
+        &:hover {
+            box-shadow: 5px 5px 20px #84A98C;
+            transform: translateY(-3%);
+            transition: 1s;
+        }
+
+        img {
+            @include tamanos (100%, 450px)
+        }
+
+        .contenido-card h2{
+            padding: 15px;
+            text-align: center;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            font-family: $Fontfamilydos;
+            color: white;
+            padding: 20px;
+            font-size: $Sizetextos;
+        }
+    }
+}
+
+
+/*CARTELERA MEDIA QUARY*/
+
+@media screen and (max-width: 1700px) {
+
+    .cartel {
+        margin-left: 0;
+
+    }
+
+    .redesconf {
+        position: static;
+        margin-top: 40px;
+        a {
+            padding: 20px;
+            display: inline-block;
+        }
+    }
+
+
+
+}
+
+@media only screen and (max-width:351px) {
+
+    .cartel {
+        flex-wrap: wrap;
+
+        .card {
+            margin: 40px;
+            margin-left: 60px;
+            margin-right: 60px;
+            margin-bottom: 100px;
+
+            img {
+                @include tamanos (100%, 500px)
+            }
+            
+        }
+    }
+
+}
+
+
+@media only screen and (min-width:320px) and (max-width:1000px) {
+    .cartel {
+        flex-wrap: wrap;
+
+        .card {
+            margin: 40px;
+            margin-left: 60px;
+            margin-right: 60px;
+            margin-bottom: 100px;
+        }
+    }
+}

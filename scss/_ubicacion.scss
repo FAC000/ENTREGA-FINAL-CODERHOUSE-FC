@@ -1,0 +1,66 @@
+/* UBICACION */
+
+.ubicacion {
+    width: 70%;
+    margin: auto;
+
+    .titulo {
+        @extend .titulospag;
+        margin-top: 100px;
+        margin-bottom: 100px;
+    }
+
+    iframe {
+        margin-top: 50px;
+        margin-bottom: 120px;
+    }
+}
+
+/* UBICACION MEDIA QUERY */
+
+@media screen and (max-width: 1350px) {
+
+
+    .redesconftres {
+        position: static;
+        margin-top: 60px;
+
+        a {
+            padding: 20px;
+            display: inline-block;
+        }
+    }
+
+    iframe {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 1120px) {
+
+    .ubicacion {
+        width: 100%;
+    }
+
+}
+
+@media screen and (max-width: 670px) {
+
+    .ubicacion {
+        margin-top: 10px;
+
+        iframe {
+            margin-top: 100px;
+        }
+
+    }
+}
+
+@media screen and (max-width: 650px) {
+
+
+    .titulo {
+        font-size: 30px;
+    }
+
+}
