@@ -153,19 +153,18 @@ nav a:hover:after {
 
 /* ARRIBA */
 .arriba {
+  position: fixed;
   visibility: hidden;
-  margin-top: 50px;
+  bottom: 10px;
+  right: 20px;
+  top: 85%;
   color: #c3d4c7;
   font-family: montserrat;
 }
 .arriba i {
   margin-bottom: 30px;
-  font-size: 20px;
-  border: 1px solid #c3d4c7;
-  padding: 20px;
-  border-radius: 50px;
+  font-size: 25px;
   color: #ffffff;
-  background-color: rgba(132, 169, 140, 0.4980392157);
 }
 .arriba i:hover {
   transform: scale(1.1);
@@ -177,7 +176,7 @@ nav a:hover:after {
   font-family: oswald;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 900px) {
   .arriba {
     visibility: visible;
   }
@@ -283,7 +282,7 @@ footer {
   margin: auto;
 }
 .ubicacion .titulo {
-  margin-top: 100px;
+  margin-top: 200px;
   margin-bottom: 100px;
 }
 .ubicacion iframe {
@@ -595,7 +594,7 @@ footer {
 /* SPOTIFY */
 /* SPOTIFY */
 .titulocinco {
-  margin-top: 100px;
+  margin-top: 200px;
 }
 
 .contenedor {

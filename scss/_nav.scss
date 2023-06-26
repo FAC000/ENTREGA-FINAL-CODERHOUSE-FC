@@ -107,19 +107,18 @@ nav {
 /* ARRIBA */
 
 .arriba {
+    position: fixed;
     visibility: hidden;
-    margin-top: 50px;
+    bottom: 10px;
+    right: 20px;
+    top: 85%;
     color: #c3d4c7;
     font-family: $Fontfamilydos;
 
     i {
         margin-bottom: 30px;
-        font-size: $Sizetextos +5;
-        border: 1px solid $Colortextosuno;
-        padding: 20px;
-        border-radius: 50px;
+        font-size: 25px;
         color: #ffffff;
-        background-color: #84a98c7f;
 
         &:hover {
             transform: scale(1.1);
@@ -134,8 +133,11 @@ nav {
     }
 }
 
-@media screen and (max-width: 768px) {
+
+@media screen and (max-width: 900px) {
     .arriba{
         visibility: visible;
     }
+
 }
+
