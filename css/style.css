@@ -1,17 +1,744 @@
-/* Error: Can't find stylesheet to import.
- *    ,
- * 31 | @import "nosotros";
- *    |         ^^^^^^^^^^
- *    '
- *   scss\style.scss 31:9  root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: "Error: Can't find stylesheet to import.\a    \2577 \a 31 \2502  @import \"nosotros\";\d\a    \2502          ^^^^^^^^^^\a    \2575 \a   scss\\style.scss 31:9  root stylesheet";
+/* VARIABLES */
+/* CODIGO CSS  QUE SE APLICA POR IGUAL EN TODAS LAS PAGINAS */
+/* EXTENDS TEXTOS */
+.titulospag, .titulocontact, .titulocinco, .entradas .banner h2, .ubicacion .titulo {
+  font-family: oswald;
+  font-size: 35px;
+  color: #c3d4c7;
 }
+
+.subitulostext, .contenedor .spo h2 {
+  font-family: montserrat;
+  color: #c3d4c7;
+  font-size: 35px -10px;
+}
+
+.textos-parrafos, .parrafocontacto, .entradas .banner p {
+  font-family: oswald;
+  font-size: 16px;
+  color: #c3d4c7;
+  line-height: 32px;
+  letter-spacing: 1px;
+}
+
+/* MIXINS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url(https://cdn.visionfruticola.com/2021/11/man-sitting-on-sofa-in-3d-glasses-eating-popcorn-watching-3d-video-game-2-scaled.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  text-transform: uppercase;
+  text-align: center;
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 3fr;
+  gap: 1fr;
+}
+
+.cover {
+  background-color: rgba(47, 62, 70, 0.5176470588);
+}
+
+/* NAVEGACION 8 */
+/* NAVEGACION */ /* EXTENDS TEXTOS */
+.titulospag, .titulocontact, .titulocinco, .entradas .banner h2, .ubicacion .titulo {
+  font-family: oswald;
+  font-size: 35px;
+  color: #c3d4c7;
+}
+
+.subitulostext, .contenedor .spo h2 {
+  font-family: montserrat;
+  color: #c3d4c7;
+  font-size: 35px -10px;
+}
+
+.textos-parrafos, .parrafocontacto, .entradas .banner p {
+  font-family: oswald;
+  font-size: 16px;
+  color: #c3d4c7;
+  line-height: 32px;
+  letter-spacing: 1px;
+}
+
+/* MIXINS */
+nav {
+  font-size: 20px;
+  font-family: oswald;
+  width: 100%;
+}
+nav .navbar-brand {
+  font-size: 30px;
+  margin-left: 10px;
+  margin-right: 50px;
+  color: #84A98C;
+}
+nav .nav-link {
+  color: #52796F;
+}
+nav .navbar-toggler {
+  margin-right: 10px;
+}
+nav .navbar-toggler-icon {
+  font-size: 20px;
+}
+nav ul {
+  list-style: none;
+}
+nav li {
+  display: inline;
+}
+nav a {
+  position: relative;
+  text-decoration: none;
+  color: #354f52;
+  margin: 20px;
+}
+nav a:after {
+  content: "";
+  position: absolute;
+  background: linear-gradient(#84A98C, #84A98C, #84A98C);
+  height: 3px;
+  width: 0%;
+  left: 0;
+  bottom: 1px;
+  transition: 1s;
+}
+nav a:hover:after {
+  width: 100%;
+}
+
+@media screen and (max-width: 425px) {
+  nav {
+    font-size: 20px;
+  }
+  nav .navbar-brand {
+    font-size: 25px;
+  }
+}
+/* REDES */
+.redesconfdos,
+.redesconftres,
+.redesconf {
+  position: fixed;
+  bottom: 10px;
+  right: 20px;
+  top: 50%;
+}
+.redesconfdos .redes_icon,
+.redesconftres .redes_icon,
+.redesconf .redes_icon {
+  display: inline;
+}
+.redesconfdos a,
+.redesconftres a,
+.redesconf a {
+  color: #c3d4c7;
+  font-size: 25px;
+  padding: 20px;
+  display: block;
+}
+.redesconfdos a:hover,
+.redesconftres a:hover,
+.redesconf a:hover {
+  text-shadow: 0 0 5px rgba(195, 212, 199, 0.4823529412);
+  transform: scale(1.3);
+  transition: 1s;
+}
+
+/* ARRIBA */
+.arriba {
+  visibility: hidden;
+  margin-top: 50px;
+  color: #c3d4c7;
+  font-family: montserrat;
+}
+.arriba i {
+  margin-bottom: 30px;
+  font-size: 20px;
+  border: 1px solid #c3d4c7;
+  padding: 20px;
+  border-radius: 50px;
+  color: #ffffff;
+  background-color: rgba(132, 169, 140, 0.4980392157);
+}
+.arriba i:hover {
+  transform: scale(1.1);
+  transition: 0.5s;
+}
+.arriba i p {
+  font-size: 15px;
+  color: white;
+  font-family: oswald;
+}
+
+@media screen and (max-width: 768px) {
+  .arriba {
+    visibility: visible;
+  }
+}
+/* FOOTER */
+footer {
+  background-color: #354f52;
+  text-align: center;
+  padding: 1.5em 0;
+  font-size: 10px;
+  color: #c3d4c7;
+  font-family: montserrat;
+}
+
+/* FOOTER MEDIA QUERY */
+@media screen and (max-width: 1090px) {
+  footer {
+    margin-top: 100px;
+  }
+}
+@media screen and (max-width: 440px) {
+  footer {
+    font-size: 10px;
+    margin-top: 120px;
+  }
+}
+/* CODIGO CSS PAGINAS INDIVIDUALES */
+/* INDEX */
+/* INDEX */
+.inicio h1 {
+  margin: 200px 0px 20px 0px;
+  color: #52796F;
+  font-size: 80px;
+  text-shadow: 2px 2px 2px #84A98C;
+  font-family: montserrat;
+}
+.inicio span {
+  color: #c3d4c7;
+}
+.inicio .cine {
+  font-size: 200px;
+}
+.inicio h2 {
+  color: white;
+  font-size: 25px;
+  margin-top: 50px;
+  margin-bottom: 100px;
+  font-family: montserrat;
+}
+.inicio .main {
+  font-family: oswald;
+  font-size: 15px;
+  width: 600px;
+  color: #c3d4c7;
+  line-height: 32px;
+  letter-spacing: 1px;
+  margin: auto;
+  margin-bottom: 220px;
+}
+
+/* INDEX MEDIA QUARY */
+@media screen and (max-width: 768px) {
+  .inicio h1 {
+    margin-top: 250px;
+    margin-bottom: 50px;
+    font-size: 30px;
+    color: white;
+  }
+  .inicio span {
+    font-size: 30px;
+  }
+  .inicio .cine {
+    font-size: 120px;
+  }
+  .inicio h2 {
+    font-size: 20px;
+  }
+  .inicio .main {
+    font-size: 16px;
+    width: 400px;
+    margin-bottom: 344px;
+  }
+}
+@media screen and (max-width: 425px) {
+  .inicio h1 {
+    font-size: 30px;
+  }
+  .inicio span {
+    color: white;
+  }
+  .inicio .cine {
+    font-size: 100px;
+  }
+  .inicio .main {
+    font-size: 16px;
+    width: 70%;
+  }
+}
+/* UBICACION */
+/* UBICACION */
+.ubicacion {
+  width: 70%;
+  margin: auto;
+}
+.ubicacion .titulo {
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+.ubicacion iframe {
+  margin-top: 50px;
+  margin-bottom: 120px;
+}
+
+/* UBICACION MEDIA QUERY */
+@media screen and (max-width: 1350px) {
+  .redesconftres {
+    position: static;
+    margin-top: 60px;
+  }
+  .redesconftres a {
+    padding: 20px;
+    display: inline-block;
+  }
+  iframe {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 1120px) {
+  .ubicacion {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 670px) {
+  .ubicacion {
+    margin-top: 10px;
+  }
+  .ubicacion iframe {
+    margin-top: 100px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .titulo {
+    font-size: 30px;
+  }
+}
+/*CARTELERA*/
+/* CARTELERA */ /* EXTENDS TEXTOS */
+.titulospag, .titulocontact, .titulocinco, .entradas .banner h2, .ubicacion .titulo {
+  font-family: oswald;
+  font-size: 35px;
+  color: #c3d4c7;
+}
+
+.subitulostext, .contenedor .spo h2 {
+  font-family: montserrat;
+  color: #c3d4c7;
+  font-size: 35px -10px;
+}
+
+.textos-parrafos, .parrafocontacto, .entradas .banner p {
+  font-family: oswald;
+  font-size: 16px;
+  color: #c3d4c7;
+  line-height: 32px;
+  letter-spacing: 1px;
+}
+
+/* MIXINS */
+.cartel {
+  margin-top: 80px;
+  width: 100%;
+  display: flex;
+  max-width: 1700px;
+  margin-left: 100px;
+  margin-bottom: 50px;
+}
+.cartel .card {
+  width: 100%;
+  margin: 20px;
+  border-radius: 6px;
+  background: #84A98C;
+  box-shadow: 0px 1px 10px #84A98C;
+  transition: all 400ms ease-out;
+}
+.cartel .card:hover {
+  box-shadow: 5px 5px 20px #84A98C;
+  transform: translateY(-3%);
+  transition: 1s;
+}
+.cartel .card img {
+  height: 450px;
+  width: 100%;
+}
+.cartel .card .contenido-card h2 {
+  padding: 15px;
+  text-align: center;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  font-family: montserrat;
+  color: white;
+  padding: 20px;
+  font-size: 15px;
+}
+
+/*CARTELERA MEDIA QUARY*/
+@media screen and (max-width: 1700px) {
+  .cartel {
+    margin-left: 0;
+  }
+  .redesconf {
+    position: static;
+    margin-top: 40px;
+  }
+  .redesconf a {
+    padding: 20px;
+    display: inline-block;
+  }
+}
+@media only screen and (max-width: 351px) {
+  .cartel {
+    flex-wrap: wrap;
+  }
+  .cartel .card {
+    margin: 40px;
+    margin-left: 60px;
+    margin-right: 60px;
+    margin-bottom: 100px;
+  }
+  .cartel .card img {
+    height: 500px;
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 320px) and (max-width: 1000px) {
+  .cartel {
+    flex-wrap: wrap;
+  }
+  .cartel .card {
+    margin: 40px;
+    margin-left: 60px;
+    margin-right: 60px;
+    margin-bottom: 100px;
+  }
+}
+/* NUESTRAS SALAS */
+/* NUESTRAS SALAS */ /* EXTENDS TEXTOS */
+.titulospag, .titulocontact, .titulocinco, .entradas .banner h2, .ubicacion .titulo {
+  font-family: oswald;
+  font-size: 35px;
+  color: #c3d4c7;
+}
+
+.subitulostext, .contenedor .spo h2 {
+  font-family: montserrat;
+  color: #c3d4c7;
+  font-size: 35px -10px;
+}
+
+.textos-parrafos, .parrafocontacto, .entradas .banner p {
+  font-family: oswald;
+  font-size: 16px;
+  color: #c3d4c7;
+  line-height: 32px;
+  letter-spacing: 1px;
+}
+
+/* MIXINS */
+.titulo {
+  margin-top: 100px;
+  font-family: oswald;
+  color: #c3d4c7;
+  font-size: 35px;
+  margin-bottom: 40px;
+}
+
+.carousel.slide {
+  margin: auto;
+  width: 50%;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+.carousel.slide img {
+  height: 500px;
+  width: 500px;
+}
+
+/* NUESTRAS SALAS MEDIA QUARY */
+@media screen and (max-width: 1350px) {
+  .carousel.slide {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .carousel.slide {
+    width: 90%;
+    margin-bottom: 200px;
+  }
+}
+/* ENTRADAS */
+/* ENTRADAS */ /* EXTENDS TEXTOS */
+.titulospag, .titulocontact, .titulocinco, .entradas .banner h2, .ubicacion .titulo {
+  font-family: oswald;
+  font-size: 35px;
+  color: #c3d4c7;
+}
+
+.subitulostext, .contenedor .spo h2 {
+  font-family: montserrat;
+  color: #c3d4c7;
+  font-size: 35px -10px;
+}
+
+.textos-parrafos, .parrafocontacto, .entradas .banner p {
+  font-family: oswald;
+  font-size: 16px;
+  color: #c3d4c7;
+  line-height: 32px;
+  letter-spacing: 1px;
+}
+
+/* MIXINS */
+.entradas {
+  margin: auto;
+  margin-top: 50px;
+  width: 100%;
+  max-width: 1200px;
+  padding: 40px 0;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 50px;
+  text-transform: uppercase;
+}
+.entradas .entradascontainer {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 20px;
+}
+.entradas .entradascontainer .ent {
+  border-radius: 10px;
+  font-weight: bold;
+  padding: 20px;
+  position: relative;
+  overflow: hidden;
+  background-color: transparent;
+  background-position: center;
+  background-size: cover;
+  border: 3px solid #354f52;
+  box-shadow: 0 0 10px rgb(255, 255, 255);
+  color: white;
+  max-height: 300px;
+  height: 2000px;
+}
+.entradas .entradascontainer .ent:hover {
+  transform: translateY(-3%);
+}
+.entradas .entradascontainer .ent .button {
+  margin: auto;
+  margin-top: 10px;
+  background-color: #354f52;
+  display: block;
+  max-height: 100px;
+  font-weight: bold;
+  font-size: 15px;
+  text-align: center;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  color: white;
+}
+.entradas .entradascontainer .ent h2 {
+  margin-top: 100px;
+  font-size: 15px 10px;
+  font-family: oswald;
+  background-color: rgba(53, 79, 82, 0.5882352941);
+}
+.entradas .banner {
+  border-radius: 10px;
+  text-align: center;
+  padding: 20px;
+  background-color: transparent;
+  background-position: center;
+  background-size: cover;
+  justify-content: space-between;
+  border: 3px solid #354f52;
+  box-shadow: 0 0 10px rgb(255, 255, 255);
+}
+.entradas .banner:hover {
+  transform: translateY(-3%);
+}
+.entradas .banner p {
+  margin-top: 400px;
+}
+
+@media screen and (max-width: 768px) {
+  .entradas {
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .entradas .entradascontainer {
+    gap: 100px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .entradas .entradascontainer .ent {
+    width: 80%;
+    margin: auto;
+  }
+  .banner {
+    width: 80%;
+    margin: auto;
+  }
+}
+/* SPOTIFY */
+/* SPOTIFY */
+.titulocinco {
+  margin-top: 100px;
+}
+
+.contenedor {
+  width: 100%;
+}
+.contenedor .spo {
+  width: 80%;
+  margin: auto;
+  margin-top: 150px;
+  margin-bottom: 250px;
+}
+.contenedor .spo h2 {
+  margin-top: 100px;
+}
+
+/* CONTACTO */
+/* CONTACTO */ /* EXTENDS TEXTOS */
+.titulospag, .titulocontact, .ubicacion .titulo, .entradas .banner h2, .titulocinco {
+  font-family: oswald;
+  font-size: 35px;
+  color: #c3d4c7;
+}
+
+.subitulostext, .contenedor .spo h2 {
+  font-family: montserrat;
+  color: #c3d4c7;
+  font-size: 35px -10px;
+}
+
+.textos-parrafos, .parrafocontacto, .entradas .banner p {
+  font-family: oswald;
+  font-size: 16px;
+  color: #c3d4c7;
+  line-height: 32px;
+  letter-spacing: 1px;
+}
+
+/* MIXINS */
+.titulocontact {
+  margin-top: 200px;
+}
+
+.parrafocontacto {
+  margin: auto;
+  width: 500px;
+  margin-top: 100px;
+}
+
+.container {
+  background-image: url(https://static.basicinvite.com/media/bi/34806/japanese-kerria-wallpaper-l-dark-green.jpg?q=1683903378);
+  background-size: cover;
+  height: 800px;
+  width: 450px;
+  padding: 10px 20px;
+  font-size: 15px 10;
+  display: flex;
+  margin: auto;
+  box-sizing: border-box;
+  border-radius: 10px;
+  border-style: solid;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+.container label {
+  color: white;
+  font-family: montserrat;
+}
+.container input,
+.container textarea,
+.container option,
+.container select {
+  width: 100%;
+  margin-bottom: 50px;
+  padding: 7px;
+  font-size: 15px 5;
+  border: none;
+  margin-top: 10px;
+  color: white;
+  background-color: rgba(4, 4, 4, 0.359);
+}
+.container input:hover,
+.container textarea:hover,
+.container option:hover,
+.container select:hover {
+  background-color: #84A98C;
+}
+.container option {
+  color: #c3d4c7;
+  background-color: #52796F;
+}
+.container textarea {
+  min-height: 100px;
+  max-height: 200px;
+  max-width: 100%;
+}
+.container #button {
+  background-color: rgba(4, 4, 4, 0.359);
+  color: white;
+  padding: 5px;
+  box-sizing: border-box;
+}
+.container #button:hover {
+  cursor: pointer;
+  background-color: #84A98C;
+  color: black;
+}
+
+/* CONTACTO MEDIA QUARY */
+@media screen and (max-width: 800px) {
+  .parrafocontacto {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .parrafocontacto {
+    width: 80%;
+  }
+  .container {
+    width: 90%;
+  }
+}
+/* MIXINS Y EXTENDS */
+/* EXTENDS TEXTOS */
+.titulospag, .ubicacion .titulo, .entradas .banner h2, .titulocinco, .titulocontact {
+  font-family: oswald;
+  font-size: 35px;
+  color: #c3d4c7;
+}
+
+.subitulostext, .contenedor .spo h2 {
+  font-family: montserrat;
+  color: #c3d4c7;
+  font-size: 35px -10px;
+}
+
+.textos-parrafos, .entradas .banner p, .parrafocontacto {
+  font-family: oswald;
+  font-size: 16px;
+  color: #c3d4c7;
+  line-height: 32px;
+  letter-spacing: 1px;
+}
+
+/* MIXINS */
+
+/*# sourceMappingURL=style.css.map */

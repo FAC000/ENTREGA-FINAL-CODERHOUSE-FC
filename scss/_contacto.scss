@@ -18,7 +18,7 @@
     background-size: cover;
     @include tamanos (450px,800px);
     padding: 10px 20px;
-    font-size: $Sizetextos (+10);
+    font-size: $Sizetextos (+ 10);
     display: flex;
     margin: auto;
     box-sizing: border-box;
@@ -39,7 +39,7 @@
         width: 100%;
         margin-bottom: 50px;
         padding: 7px;
-        font-size: $Sizetextos (+5);
+        font-size: $Sizetextos (+ 5);
         border: none;
         margin-top: 10px;
         color:  $Colortextosdos;
