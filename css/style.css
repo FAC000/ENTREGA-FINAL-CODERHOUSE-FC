@@ -186,7 +186,7 @@ footer {
   font-weight: 400;
   margin: 200px 0px 20px 0px;
   color: #52796F;
-  font-size: 80px;
+  font-size: 100px;
   text-shadow: 2px 2px 2px #84A98C;
   font-family: montserrat;
 }
@@ -194,21 +194,21 @@ footer {
   color: #c3d4c7;
 }
 .inicio .cine {
-  font-size: 200px;
+  font-size: 250px;
 }
 .inicio h2 {
   letter-spacing: 2px;
   font-weight: 900;
   color: #c3d4c7;
   text-shadow: 0px 0px 10px #52796F, 0px 0px 25px #52796F, 0px 0px 50px #84A98C;
-  font-size: 30px;
+  font-size: 40px;
   margin-top: 60px;
   margin-bottom: 100px;
   font-family: montserrat;
 }
 .inicio .main {
   font-family: oswald;
-  font-size: 20px;
+  font-size: 18px;
   width: 800px;
   color: #c3d4c7;
   line-height: 32px;
@@ -226,17 +226,17 @@ footer {
   .inicio h1 {
     margin-top: 250px;
     margin-bottom: 50px;
-    font-size: 40px;
+    font-size: 80px;
     color: white;
   }
   .inicio span {
-    font-size: 40px;
+    font-size: 80px;
   }
   .inicio .cine {
-    font-size: 120px;
+    font-size: 200px;
   }
   .inicio h2 {
-    font-size: 20px;
+    font-size: 30px;
   }
   .inicio .main {
     font-size: 15px;
@@ -251,13 +251,17 @@ footer {
 }
 @media screen and (max-width: 425px) {
   .inicio h1 {
-    font-size: 30px;
+    font-size: 40px;
   }
   .inicio span {
+    font-size: 40px;
     color: white;
   }
   .inicio .cine {
     font-size: 100px;
+  }
+  .inicio h2 {
+    font-size: 25px;
   }
   .inicio .main {
     width: 70%;
@@ -549,7 +553,7 @@ footer {
   background-color: #84A98C;
   color: aliceblue;
 }
-.entradas .ent:hover {
+.entradas .ent .button:hover {
   transform: scale(1.09);
   text-shadow: 0 0 25px white;
   box-shadow: 0 0 25px white;
