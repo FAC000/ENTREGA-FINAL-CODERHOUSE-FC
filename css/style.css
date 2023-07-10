@@ -1,7 +1,7 @@
 /* VARIABLES */
 /* CODIGO CSS  QUE SE APLICA POR IGUAL EN TODAS LAS PAGINAS */
 /* EXTENDS TEXTOS */
-.titulospag, .titulocontact, .titulocinco, .entradas .banner h2, .ubicacion .titulo {
+.titulospag, .titulocontact, .titulocinco, .ubicacion .titulo {
   font-family: oswald;
   font-size: 35px;
   color: #c3d4c7;
@@ -13,12 +13,12 @@
   font-size: 35px -10px;
 }
 
-.textos-parrafos, .parrafocontacto, .entradas .banner p {
+.textos-parrafos, .parrafocontacto {
   font-family: oswald;
   font-size: 16px;
   color: #c3d4c7;
   line-height: 32px;
-  letter-spacing: 1px;
+  letter-spacing: 2px;
 }
 
 /* MIXINS */
@@ -41,12 +41,17 @@ body {
 }
 
 .cover {
-  background-color: rgba(47, 62, 70, 0.5176470588);
+  background-color: rgba(53, 79, 82, 0.8235294118);
 }
 
+@media screen and (max-width: 768px) {
+  body {
+    background-position: center;
+  }
+}
 /* NAVEGACION 8 */
 /* NAVEGACION */ /* EXTENDS TEXTOS */
-.titulospag, .titulocontact, .titulocinco, .entradas .banner h2, .ubicacion .titulo {
+.titulospag, .titulocontact, .titulocinco, .ubicacion .titulo {
   font-family: oswald;
   font-size: 35px;
   color: #c3d4c7;
@@ -58,12 +63,12 @@ body {
   font-size: 35px -10px;
 }
 
-.textos-parrafos, .parrafocontacto, .entradas .banner p {
+.textos-parrafos, .parrafocontacto {
   font-family: oswald;
   font-size: 16px;
   color: #c3d4c7;
   line-height: 32px;
-  letter-spacing: 1px;
+  letter-spacing: 2px;
 }
 
 /* MIXINS */
@@ -74,7 +79,7 @@ nav {
 }
 nav .navbar-brand {
   font-size: 30px;
-  margin-left: 10px;
+  margin-left: 20px;
   margin-right: 50px;
   color: #84A98C;
 }
@@ -82,7 +87,7 @@ nav .nav-link {
   color: #52796F;
 }
 nav .navbar-toggler {
-  margin-right: 10px;
+  margin-right: 20px;
 }
 nav .navbar-toggler-icon {
   font-size: 20px;
@@ -151,36 +156,6 @@ nav a:hover:after {
   transition: 1s;
 }
 
-/* ARRIBA */
-.arriba {
-  position: fixed;
-  visibility: hidden;
-  bottom: 10px;
-  right: 20px;
-  top: 85%;
-  color: #c3d4c7;
-  font-family: montserrat;
-}
-.arriba i {
-  margin-bottom: 30px;
-  font-size: 25px;
-  color: #ffffff;
-}
-.arriba i:hover {
-  transform: scale(1.1);
-  transition: 0.5s;
-}
-.arriba i p {
-  font-size: 15px;
-  color: white;
-  font-family: oswald;
-}
-
-@media screen and (max-width: 900px) {
-  .arriba {
-    visibility: visible;
-  }
-}
 /* FOOTER */
 footer {
   background-color: #354f52;
@@ -207,6 +182,8 @@ footer {
 /* INDEX */
 /* INDEX */
 .inicio h1 {
+  letter-spacing: 5px;
+  font-weight: 400;
   margin: 200px 0px 20px 0px;
   color: #52796F;
   font-size: 80px;
@@ -220,21 +197,28 @@ footer {
   font-size: 200px;
 }
 .inicio h2 {
-  color: white;
-  font-size: 25px;
-  margin-top: 50px;
+  letter-spacing: 2px;
+  font-weight: 900;
+  color: #c3d4c7;
+  text-shadow: 0px 0px 10px #52796F, 0px 0px 25px #52796F, 0px 0px 50px #84A98C;
+  font-size: 30px;
+  margin-top: 60px;
   margin-bottom: 100px;
   font-family: montserrat;
 }
 .inicio .main {
   font-family: oswald;
-  font-size: 15px;
-  width: 600px;
+  font-size: 20px;
+  width: 800px;
   color: #c3d4c7;
   line-height: 32px;
-  letter-spacing: 1px;
+  letter-spacing: 2px;
   margin: auto;
   margin-bottom: 220px;
+}
+.inicio .mainspan {
+  color: rgba(255, 255, 255, 0.7176470588);
+  font-weight: 600;
 }
 
 /* INDEX MEDIA QUARY */
@@ -242,11 +226,11 @@ footer {
   .inicio h1 {
     margin-top: 250px;
     margin-bottom: 50px;
-    font-size: 30px;
+    font-size: 40px;
     color: white;
   }
   .inicio span {
-    font-size: 30px;
+    font-size: 40px;
   }
   .inicio .cine {
     font-size: 120px;
@@ -255,9 +239,14 @@ footer {
     font-size: 20px;
   }
   .inicio .main {
-    font-size: 16px;
+    font-size: 15px;
     width: 400px;
     margin-bottom: 344px;
+  }
+  .inicio .main .mainspan {
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.7176470588);
+    font-weight: 600;
   }
 }
 @media screen and (max-width: 425px) {
@@ -271,19 +260,31 @@ footer {
     font-size: 100px;
   }
   .inicio .main {
-    font-size: 16px;
     width: 70%;
   }
 }
 /* UBICACION */
 /* UBICACION */
 .ubicacion {
-  width: 70%;
+  width: 100%;
   margin: auto;
 }
 .ubicacion .titulo {
   margin-top: 200px;
   margin-bottom: 100px;
+}
+.ubicacion .parrafoubicacion {
+  font-weight: 400;
+  color: white;
+  font-family: oswald;
+  letter-spacing: 1px;
+  margin: auto;
+  width: 500px;
+  margin-top: 100px;
+}
+.ubicacion .parrafoubicacion .spanubicacion {
+  color: white;
+  font-weight: 600;
 }
 .ubicacion iframe {
   margin-top: 50px;
@@ -301,30 +302,25 @@ footer {
     display: inline-block;
   }
   iframe {
-    width: 100%;
-  }
-}
-@media screen and (max-width: 1120px) {
-  .ubicacion {
-    width: 100%;
+    width: 80%;
   }
 }
 @media screen and (max-width: 670px) {
   .ubicacion {
+    width: 90%;
     margin-top: 10px;
+  }
+  .ubicacion .parrafoubicacion {
+    width: 100%;
+    font-size: 15px;
   }
   .ubicacion iframe {
     margin-top: 100px;
   }
 }
-@media screen and (max-width: 650px) {
-  .titulo {
-    font-size: 30px;
-  }
-}
 /*CARTELERA*/
 /* CARTELERA */ /* EXTENDS TEXTOS */
-.titulospag, .titulocontact, .titulocinco, .entradas .banner h2, .ubicacion .titulo {
+.titulospag, .titulocontact, .titulocinco, .ubicacion .titulo {
   font-family: oswald;
   font-size: 35px;
   color: #c3d4c7;
@@ -336,12 +332,12 @@ footer {
   font-size: 35px -10px;
 }
 
-.textos-parrafos, .parrafocontacto, .entradas .banner p {
+.textos-parrafos, .parrafocontacto {
   font-family: oswald;
   font-size: 16px;
   color: #c3d4c7;
   line-height: 32px;
-  letter-spacing: 1px;
+  letter-spacing: 2px;
 }
 
 /* MIXINS */
@@ -371,6 +367,7 @@ footer {
   width: 100%;
 }
 .cartel .card .contenido-card h2 {
+  font-weight: 600;
   padding: 15px;
   text-align: center;
   margin-bottom: 15px;
@@ -406,7 +403,7 @@ footer {
     margin-bottom: 100px;
   }
   .cartel .card img {
-    height: 500px;
+    height: 400px;
     width: 100%;
   }
 }
@@ -423,7 +420,7 @@ footer {
 }
 /* NUESTRAS SALAS */
 /* NUESTRAS SALAS */ /* EXTENDS TEXTOS */
-.titulospag, .titulocontact, .titulocinco, .entradas .banner h2, .ubicacion .titulo {
+.titulospag, .titulocontact, .titulocinco, .ubicacion .titulo {
   font-family: oswald;
   font-size: 35px;
   color: #c3d4c7;
@@ -435,21 +432,22 @@ footer {
   font-size: 35px -10px;
 }
 
-.textos-parrafos, .parrafocontacto, .entradas .banner p {
+.textos-parrafos, .parrafocontacto {
   font-family: oswald;
   font-size: 16px;
   color: #c3d4c7;
   line-height: 32px;
-  letter-spacing: 1px;
+  letter-spacing: 2px;
 }
 
 /* MIXINS */
 .titulo {
-  margin-top: 100px;
+  margin-top: 200px;
   font-family: oswald;
   color: #c3d4c7;
   font-size: 35px;
   margin-bottom: 40px;
+  font-weight: 600;
 }
 
 .carousel.slide {
@@ -477,7 +475,7 @@ footer {
 }
 /* ENTRADAS */
 /* ENTRADAS */ /* EXTENDS TEXTOS */
-.titulospag, .titulocontact, .titulocinco, .entradas .banner h2, .ubicacion .titulo {
+.titulospag, .titulocontact, .titulocinco, .ubicacion .titulo {
   font-family: oswald;
   font-size: 35px;
   color: #c3d4c7;
@@ -489,12 +487,12 @@ footer {
   font-size: 35px -10px;
 }
 
-.textos-parrafos, .parrafocontacto, .entradas .banner p {
+.textos-parrafos, .parrafocontacto {
   font-family: oswald;
   font-size: 16px;
   color: #c3d4c7;
   line-height: 32px;
-  letter-spacing: 1px;
+  letter-spacing: 2px;
 }
 
 /* MIXINS */
@@ -502,19 +500,14 @@ footer {
   margin: auto;
   margin-top: 50px;
   width: 100%;
-  max-width: 1200px;
-  padding: 40px 0;
-  display: grid;
-  grid-template-columns: 3fr 1fr;
-  gap: 50px;
+  padding: 40px;
   text-transform: uppercase;
-}
-.entradas .entradascontainer {
-  display: grid;
-  grid-template-columns: 3fr 1fr;
-  gap: 20px;
+  display: flex;
+  flex-direction: column;
 }
 .entradas .entradascontainer .ent {
+  margin: auto;
+  margin-bottom: 50px;
   border-radius: 10px;
   font-weight: bold;
   padding: 20px;
@@ -523,72 +516,54 @@ footer {
   background-color: transparent;
   background-position: center;
   background-size: cover;
-  border: 3px solid #354f52;
-  box-shadow: 0 0 10px rgb(255, 255, 255);
   color: white;
-  max-height: 300px;
-  height: 2000px;
-}
-.entradas .entradascontainer .ent:hover {
-  transform: translateY(-3%);
+  height: 500px;
+  width: 500px;
+  max-width: 500px;
 }
 .entradas .entradascontainer .ent .button {
   margin: auto;
-  margin-top: 10px;
-  background-color: #354f52;
+  margin-top: 350px;
+  background-color: #c3d4c7;
+  color: black;
   display: block;
-  max-height: 100px;
-  font-weight: bold;
+  font-weight: 700;
+  max-height: 300px;
   font-size: 15px;
   text-align: center;
   padding: 10px;
   border: none;
   cursor: pointer;
   text-transform: uppercase;
-  color: white;
+  border-radius: 5px;
+  border: 1px solid #354f52;
+}
+.entradas .entradascontainer .ent .button:hover {
+  box-shadow: 0 0 10px #354f52;
+  transform: scale(1.09);
 }
 .entradas .entradascontainer .ent h2 {
-  margin-top: 100px;
+  font-weight: 500;
+  margin-top: 10px;
   font-size: 15px 10px;
   font-family: oswald;
   background-color: rgba(53, 79, 82, 0.5882352941);
 }
-.entradas .banner {
-  border-radius: 10px;
-  text-align: center;
-  padding: 20px;
-  background-color: transparent;
-  background-position: center;
-  background-size: cover;
-  justify-content: space-between;
-  border: 3px solid #354f52;
-  box-shadow: 0 0 10px rgb(255, 255, 255);
-}
-.entradas .banner:hover {
-  transform: translateY(-3%);
-}
-.entradas .banner p {
-  margin-top: 400px;
-}
 
 @media screen and (max-width: 768px) {
-  .entradas {
-    margin-top: 50px;
-    display: flex;
-    flex-wrap: wrap;
-  }
-  .entradas .entradascontainer {
-    gap: 100px;
-    display: flex;
-    flex-wrap: wrap;
-  }
   .entradas .entradascontainer .ent {
-    width: 80%;
-    margin: auto;
+    width: 300px;
   }
-  .banner {
-    width: 80%;
-    margin: auto;
+}
+@media screen and (max-width: 500px) {
+  .entradas .entradascontainer .ent {
+    height: 100%;
+    width: 100%;
+  }
+  .entradas .entradascontainer .ent h2 {
+    font-size: 20px;
+    font-weight: 700;
+    padding: 15px;
   }
 }
 /* SPOTIFY */
@@ -612,7 +587,7 @@ footer {
 
 /* CONTACTO */
 /* CONTACTO */ /* EXTENDS TEXTOS */
-.titulospag, .titulocontact, .ubicacion .titulo, .entradas .banner h2, .titulocinco {
+.titulospag, .titulocontact, .ubicacion .titulo, .titulocinco {
   font-family: oswald;
   font-size: 35px;
   color: #c3d4c7;
@@ -624,93 +599,76 @@ footer {
   font-size: 35px -10px;
 }
 
-.textos-parrafos, .parrafocontacto, .entradas .banner p {
+.textos-parrafos, .parrafocontacto {
   font-family: oswald;
   font-size: 16px;
   color: #c3d4c7;
   line-height: 32px;
-  letter-spacing: 1px;
+  letter-spacing: 2px;
 }
 
 /* MIXINS */
 .titulocontact {
   margin-top: 200px;
+  font-weight: 600;
 }
 
 .parrafocontacto {
+  font-weight: 900;
   margin: auto;
   width: 500px;
   margin-top: 100px;
 }
 
-.container {
-  background-image: url(https://static.basicinvite.com/media/bi/34806/japanese-kerria-wallpaper-l-dark-green.jpg?q=1683903378);
-  background-size: cover;
-  height: 800px;
-  width: 450px;
-  padding: 10px 20px;
-  font-size: 15px 10;
-  display: flex;
+.parrafocontactodos {
+  font-weight: 900;
   margin: auto;
-  box-sizing: border-box;
-  border-radius: 10px;
-  border-style: solid;
-  margin-top: 100px;
+  width: 500px;
+  font-size: 25px;
+  color: white;
+  margin-bottom: 80px;
+  margin-top: 120px;
+}
+
+.redescontacto {
+  margin-bottom: 200px;
+}
+.redescontacto .redes_icon {
+  display: inline-block;
+  margin-top: 10px;
   margin-bottom: 100px;
 }
-.container label {
-  color: white;
-  font-family: montserrat;
+.redescontacto a {
+  color: darkseagreen;
+  font-size: 50px;
+  padding: 60px;
 }
-.container input,
-.container textarea,
-.container option,
-.container select {
-  width: 100%;
-  margin-bottom: 50px;
-  padding: 7px;
-  font-size: 15px 5;
-  border: none;
-  margin-top: 10px;
-  color: white;
-  background-color: rgba(4, 4, 4, 0.359);
-}
-.container input:hover,
-.container textarea:hover,
-.container option:hover,
-.container select:hover {
-  background-color: #84A98C;
-}
-.container option {
+.redescontacto i:hover {
   color: #c3d4c7;
-  background-color: #52796F;
-}
-.container textarea {
-  min-height: 100px;
-  max-height: 200px;
-  max-width: 100%;
-}
-.container #button {
-  background-color: rgba(4, 4, 4, 0.359);
-  color: white;
-  padding: 5px;
-  box-sizing: border-box;
-}
-.container #button:hover {
-  cursor: pointer;
-  background-color: #84A98C;
-  color: black;
+  transform: translateY(-20%);
+  transition: 1s;
 }
 
 /* CONTACTO MEDIA QUARY */
 @media screen and (max-width: 800px) {
   .parrafocontacto {
-    width: 100%;
+    width: 80%;
+  }
+  .parrafocontactodos {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .redescontacto .redes_icon {
+    margin-top: 30px;
   }
 }
 @media screen and (max-width: 500px) {
   .parrafocontacto {
     width: 80%;
+  }
+  .parrafocontactodos {
+    width: 100%;
   }
   .container {
     width: 90%;
@@ -718,7 +676,7 @@ footer {
 }
 /* MIXINS Y EXTENDS */
 /* EXTENDS TEXTOS */
-.titulospag, .ubicacion .titulo, .entradas .banner h2, .titulocinco, .titulocontact {
+.titulospag, .ubicacion .titulo, .titulocinco, .titulocontact {
   font-family: oswald;
   font-size: 35px;
   color: #c3d4c7;
@@ -730,12 +688,12 @@ footer {
   font-size: 35px -10px;
 }
 
-.textos-parrafos, .entradas .banner p, .parrafocontacto {
+.textos-parrafos, .parrafocontacto {
   font-family: oswald;
   font-size: 16px;
   color: #c3d4c7;
   line-height: 32px;
-  letter-spacing: 1px;
+  letter-spacing: 2px;
 }
 
 /* MIXINS */

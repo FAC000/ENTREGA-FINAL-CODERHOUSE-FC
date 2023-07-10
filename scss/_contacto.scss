@@ -1,95 +1,83 @@
 /* CONTACTO */
 @import "mixinsextends";
 
-.titulocontact{
-    @extend .titulospag;
-     margin-top: 200px;
+.titulocontact {
+  @extend .titulospag;
+  margin-top: 200px;
+  font-weight: 600;
 }
 
 .parrafocontacto {
-    margin: auto;
-    width: 500px;
-    margin-top: 100px;
-    @extend .textos-parrafos;
+  font-weight: 900;
+  margin: auto;
+  width: 500px;
+  margin-top: 100px;
+  @extend .textos-parrafos;
 }
 
-.container {
-    background-image: url(https://static.basicinvite.com/media/bi/34806/japanese-kerria-wallpaper-l-dark-green.jpg?q=1683903378);
-    background-size: cover;
-    @include tamanos (450px,800px);
-    padding: 10px 20px;
-    font-size: $Sizetextos (+ 10);
-    display: flex;
-    margin: auto;
-    box-sizing: border-box;
-    border-radius: 10px;
-    border-style: solid;
-    margin-top: 100px;
+.parrafocontactodos {
+  font-weight: 900;
+  margin: auto;
+  width: 500px;
+  font-size: 25px;
+  color: $Colortextosdos;
+  margin-bottom: 80px;
+  margin-top: 120px;
+}
+
+.redescontacto {
+  margin-bottom: 200px;
+
+  .redes_icon {
+    display: inline-block;
+    margin-top: 10px;
     margin-bottom: 100px;
 
-    label {
-       color:  $Colortextosdos;
-       font-family:  $Fontfamilydos;
-    }
+  }
 
-    input,
-    textarea,
-    option,
-    select {
-        width: 100%;
-        margin-bottom: 50px;
-        padding: 7px;
-        font-size: $Sizetextos (+ 5);
-        border: none;
-        margin-top: 10px;
-        color:  $Colortextosdos;
-        background-color: rgba(4, 4, 4, 0.359);
+  a {
+    color: darkseagreen;
+    font-size: 50px;
+    padding: 60px;
+  }
 
-        &:hover {
-            background-color: #84A98C;
-        }
-    }
-
-    option {
-        color: $Colortextosuno;
-        background-color: #52796F;
-    }
-
-    textarea {
-        min-height: 100px;
-        max-height: 200px;
-        max-width: 100%;
-    }
-
-    #button {
-        background-color: rgba(4, 4, 4, 0.359);
-        color: $Colortextosdos;
-        padding: 5px;
-        box-sizing: border-box;
-
-        &:hover {
-            cursor: pointer;
-            background-color: #84A98C;
-            color: black;
-        }
-    }
+  i:hover {
+    color: $Colortextosuno;
+    transform: translateY(-20%);
+    transition: 1s;
+  }
 }
-
 
 /* CONTACTO MEDIA QUARY */
+@media screen and (max-width: 800px) {
+  .parrafocontacto {
+    width: 80%;
+  }
 
-@media screen and (max-width:800px) {
-
-    .parrafocontacto {
-        width: 100%;
-    }
+  .parrafocontactodos {
+    width: 80%;
+  }
 }
 
-@media screen and (max-width:500px) {
-    .parrafocontacto {
-        width: 80%; 
+@media screen and (max-width: 768px) {
+  .redescontacto {
+    .redes_icon {
+      margin-top: 30px;
+
     }
-    .container {
-        width: 90%;
-    }   
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .parrafocontacto {
+    width: 80%;
+  }
+
+  .parrafocontactodos {
+    width: 100%;
+  }
+
+  .container {
+    width: 90%;
+  }
 }

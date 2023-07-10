@@ -3,11 +3,12 @@
 @import "mixinsextends";
 
 .titulo {
-    margin-top: 100px;
+    margin-top: 200px;
     font-family: $Fontfamily;
     color: $Colortextosuno;
     font-size: $Sizetitulo;
     margin-bottom: 40px;
+    font-weight: 600;
 }
 
 .carousel.slide {

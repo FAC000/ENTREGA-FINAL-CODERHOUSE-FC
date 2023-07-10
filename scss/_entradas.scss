@@ -7,105 +7,79 @@
     margin: auto;
     margin-top: 50px;
     width: 100%;
-    max-width: 1200px;
-    padding: 40px 0;
-    @include grid(grid, 3fr 1fr, 50px);
+    padding: 40px;
     text-transform: uppercase;
+    display: flex;
+    flex-direction: column;
+  
 
     .entradascontainer {
-        @include grid(grid, 3fr 1fr, 20px);
+        
         .ent {
+            margin: auto;
+            margin-bottom: 50px;
             border-radius: 10px;
             font-weight: bold;
             padding: 20px;
             position: relative;
             overflow: hidden;
             @include background (transparent, center, cover);
-            border: 3px solid #354f52;
-            box-shadow: 0 0 10px rgb(255, 255, 255);
             color: $Colortextosdos;
-            max-height: 300px;
-            height: 2000px;
-    
-    
-            &:hover {
-                transform: translateY(-3%);
-            }
-    
+            @include tamanos (500px, 500px);
+            max-width: 500px;
+
+
             .button {
                 margin: auto;
-                margin-top: 10px;
-                background-color: #354f52;
+                margin-top: 350px;
+                background-color: $Colortextosuno;
+                color: black;
                 display: block;
-                max-height: 100px;
-                font-weight: bold;
+                font-weight: 700;
+                max-height: 300px;
                 font-size: $Sizetextos;
                 text-align: center;
                 padding: 10px;
                 border: none;
                 cursor: pointer;
                 text-transform: uppercase;
-                color: $Colortextosdos;
+                border-radius: 5px;
+                border: 1px solid #354f52;
+
+                &:hover {
+                    box-shadow: 0 0 10px #354f52;
+                    transform: scale(1.090);
+                }
             }
-    
+
             h2 {
-                margin-top: 100px;
+                font-weight: 500;
+                margin-top: 10px;
                 font-size: $Sizetextos (+ 10px);
                 font-family: $Fontfamily;
                 background-color: #354f5296;
             }
-    
-        }
-    
-    }
 
-   
-
-    .banner {
-        border-radius: 10px;
-        text-align: center;
-        padding: 20px;
-        @include background (transparent, center, cover);
-        justify-content: space-between;
-        border: 3px solid #354f52;
-        box-shadow: 0 0 10px rgb(255, 255, 255);
-
-        &:hover {
-            transform: translateY(-3%);
         }
 
-        h2 {
-            @extend .titulospag;
-        }
-
-        p {
-            margin-top: 400px;
-            @extend .textos-parrafos;
-        }
     }
 }
 
-
 @media screen and (max-width: 768px) {
-    .entradas {
-        margin-top: 50px;
-       @include flex( flex, wrap);
-     
+    .entradas .entradascontainer .ent {
+        width: 300px;
+    }
+}
 
-        .entradascontainer {
-            gap: 100px;
-            @include flex( flex, wrap);
-
-            .ent {
-                width: 80%;
-                margin: auto;
-            }
+@media screen and (max-width: 500px) {
+    .entradas .entradascontainer .ent {
+        @include tamanos (100%, 100%);
+       
+        h2 {
+            font-size: 20px;
+            font-weight: 700;
+            padding: 15px;
+    
         }
     }
-
-    .banner {
-        width: 80%;
-        margin: auto;
-    }
-
 }

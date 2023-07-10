@@ -1,13 +1,28 @@
 /* UBICACION */
 
 .ubicacion {
-    width: 70%;
+    width: 100%;
     margin: auto;
 
     .titulo {
         @extend .titulospag;
         margin-top: 200px;
         margin-bottom: 100px;
+    }
+
+    .parrafoubicacion {
+        font-weight: 400;
+        color: $Colortextosdos;
+        font-family: $Fontfamily;
+        letter-spacing: 1px;
+        margin: auto;
+        width: 500px;
+        margin-top: 100px;
+
+        .spanubicacion {
+            color: $Colortextosdos;
+            font-weight: 600;
+        }
     }
 
     iframe {
@@ -32,35 +47,26 @@
     }
 
     iframe {
-        width: 100%;
+        width: 80%;
     }
 }
 
-@media screen and (max-width: 1120px) {
-
-    .ubicacion {
-        width: 100%;
-    }
-
-}
 
 @media screen and (max-width: 670px) {
 
     .ubicacion {
+        width: 90%;
         margin-top: 10px;
 
+        .parrafoubicacion {
+            width: 100%;
+            font-size: 15px;
+
+        }
+    
         iframe {
             margin-top: 100px;
         }
 
     }
-}
-
-@media screen and (max-width: 650px) {
-
-
-    .titulo {
-        font-size: 30px;
-    }
-
 }

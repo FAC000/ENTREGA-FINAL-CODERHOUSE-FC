@@ -17,5 +17,13 @@ body {
 }
 
 .cover {
-    background-color: #2f3e4684;
+    background-color: #354f52d2;
+}
+
+@media screen and (max-width: 768px) {
+
+    body{
+      background-position: center;
+    }
+        
 }
