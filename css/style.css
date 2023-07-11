@@ -255,10 +255,10 @@ footer {
 }
 @media screen and (max-width: 425px) {
   .inicio h1 {
-    font-size: 40px;
+    font-size: 30px;
   }
   .inicio span {
-    font-size: 40px;
+    font-size: 30px;
     color: white;
   }
   .inicio .cine {
