@@ -183,7 +183,6 @@ footer {
 /* INDEX */
 .inicio h1 {
   letter-spacing: 5px;
-  font-weight: 400;
   margin: 200px 0px 20px 0px;
   color: #52796F;
   font-size: 100px;
@@ -195,6 +194,7 @@ footer {
 }
 .inicio .cine {
   font-size: 250px;
+  font-weight: 600;
 }
 .inicio h2 {
   letter-spacing: 2px;
