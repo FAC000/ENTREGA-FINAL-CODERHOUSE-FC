@@ -253,7 +253,7 @@ footer {
     font-weight: 600;
   }
 }
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 450px) {
   .inicio h1 {
     font-size: 30px;
   }
