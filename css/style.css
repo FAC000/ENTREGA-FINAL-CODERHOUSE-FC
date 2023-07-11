@@ -226,17 +226,21 @@ footer {
   .inicio h1 {
     margin-top: 250px;
     margin-bottom: 50px;
-    font-size: 80px;
+    font-size: 60px;
     color: white;
   }
   .inicio span {
-    font-size: 80px;
+    font-size: 60px;
   }
   .inicio .cine {
-    font-size: 200px;
+    font-size: 120px;
   }
   .inicio h2 {
     font-size: 30px;
+    width: 80%;
+    margin: auto;
+    margin-bottom: 100px;
+    margin-top: 50px;
   }
   .inicio .main {
     font-size: 15px;
@@ -258,7 +262,7 @@ footer {
     color: white;
   }
   .inicio .cine {
-    font-size: 100px;
+    font-size: 80px;
   }
   .inicio h2 {
     font-size: 25px;
@@ -501,6 +505,7 @@ footer {
 
 /* MIXINS */
 .entradas {
+  font-size: 15px;
   width: 80%;
   max-width: 1200px;
   margin: auto;
@@ -532,11 +537,13 @@ footer {
   font-family: oswald;
   background-color: rgba(53, 79, 82, 0.6549019608);
   width: 100%;
-  height: 80px;
-  font-size: 24px;
+  height: 60px;
   padding: 20px 0;
   display: grid;
-  grid-template-rows: 1fr 3fr;
+}
+.entradas .ent .entext h2 {
+  font-size: 20px;
+  font-weight: 600;
 }
 .entradas .ent .button {
   width: 150px;
@@ -559,15 +566,19 @@ footer {
   box-shadow: 0 0 25px white;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 900px) {
   .entradas {
-    width: 80%;
+    margin-top: 100px;
+    width: 90%;
     padding: 5px;
   }
-  .entradascontainer {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 50px;
+}
+@media screen and (max-width: 635px) {
+  .entradas {
+    width: 70%;
+  }
+  .entradas .entradascontainer {
+    grid-template-columns: repeat(1, 1fr);
   }
 }
 /* SPOTIFY */
