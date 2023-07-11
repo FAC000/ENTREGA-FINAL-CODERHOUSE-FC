@@ -86,6 +86,13 @@ nav .navbar-brand {
 nav .nav-link {
   color: #52796F;
 }
+nav .nav-link:hover {
+  transform: scale(1.1);
+}
+nav .inicio, nav .ubi, nav .cartelera, nav .salas, nav .entradasnav, nav .spotify, nav .contacto {
+  color: rgb(75, 102, 75);
+  font-weight: bold;
+}
 nav .navbar-toggler {
   margin-right: 20px;
 }
@@ -520,14 +527,12 @@ footer {
   min-height: 400px;
   border-radius: 10px;
   padding: 20px;
-  position: relative;
-  overflow: hidden;
   background-size: cover;
   background-position: center;
-  border: 2px solid #c3d4c7;
+  border: 1px solid rgba(255, 255, 255, 0.701);
 }
 .entradas .ent:hover {
-  transform: translateY(-3%);
+  box-shadow: 0 0 10px #84A98C;
 }
 .entradas .ent .entext {
   font-family: oswald;

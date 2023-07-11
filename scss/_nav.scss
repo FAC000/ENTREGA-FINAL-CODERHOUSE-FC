@@ -17,6 +17,14 @@ nav {
 
     .nav-link {
         color: #52796F;
+        &:hover {
+           transform: scale(1.1);
+        }
+    }
+
+    .inicio, .ubi, .cartelera, .salas, .entradasnav, .spotify, .contacto{
+       color: rgb(75, 102, 75) ;
+       font-weight: bold;
     }
 
     .navbar-toggler {
@@ -43,6 +51,7 @@ nav {
         text-decoration: none;
         color: #354f52;
         margin: 20px;
+        
 
         &:after {
             content: "";
@@ -56,6 +65,7 @@ nav {
 
         &:hover:after {
             width: 100%;
+            
         }
     }
 
