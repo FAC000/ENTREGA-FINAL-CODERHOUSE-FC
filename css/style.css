@@ -253,19 +253,15 @@ footer {
     font-weight: 600;
   }
 }
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 455px) {
   .inicio h1 {
-    font-size: 30px;
+    font-size: 40px;
   }
   .inicio span {
-    font-size: 30px;
-    color: white;
-  }
-  .inicio .cine {
-    font-size: 60px;
+    font-size: 40px;
   }
   .inicio h2 {
-    font-size: 20px;
+    font-size: 25px;
   }
   .inicio .main {
     width: 90%;
